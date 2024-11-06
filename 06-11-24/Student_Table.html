@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Details</title>
+    <style>
+      .studentTable {
+        stroke: 1px solid grey;
+        border-collapse: collapse;
+      }
+
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Student Details</h1>
+    <table id="studentTable">
+      <thead>
+        <tr>
+          <th>Student Id</th>
+          <th>Student Name</th>
+          <th>Skill Set</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody"></tbody>
+
+      <input
+        type="button"
+        value="Get Data"
+        onclick="createTableRows(students)"
+      />
+    </table>
+
+    <script>
+      const students = [
+        { studentId: 11, studentName: "Aditya", skillSet: "Angular" },
+        { studentId: 12, studentName: "Archit", skillSet: "React" },
+        { studentId: 13, studentName: "Aviral", skillSet: "Node Js" },
+        { studentId: 14, studentName: "Priyanka", skillSet: "HTML" },
+        { studentId: 15, studentName: "Rijish", skillSet: "Vue" },
+      ];
+
+      function createTableRows(students) {
+        const tableBody = document.getElementById("tableBody");
+        students.forEach((student) => {
+          const row = document.createElement("tr");
+          const nameCell = document.createElement("td");
+          const rollNoCell = document.createElement("td");
+          const ageCell = document.createElement("td");
+
+          nameCell.textContent = student.studentId;
+          rollNoCell.textContent = student.studentName;
+          ageCell.textContent = student.skillSet;
+
+          row.appendChild(nameCell);
+          row.appendChild(rollNoCell);
+          row.appendChild(ageCell);
+
+          tableBody.appendChild(row);
+        });
+      }
+    </script>
+  </body>
+</html>

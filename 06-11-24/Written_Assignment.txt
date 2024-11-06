@@ -1,0 +1,11 @@
+1. What is map() array method?  How to use  map() method in javascript? 
+
+Ans : Map method is used to iterate through the array and perform some operation on the elements od the array, It takes a callback function and performs the operation on each element of the array. the output of this method will be a new array.
+
+2.  What are other usages of spread operator (...) in JavaScript?
+
+Ans : It can be used to 
+    1. Concatinate multiple arrays/objects, like [...arr1, ...arr2] / {...obj1, ...obj2}
+    2. To pass the array / object elements to some function, like function funName(...arr){}
+    3. To create a copy of the array to another variable
+    4. As mentioned Destructuring can be done using spread

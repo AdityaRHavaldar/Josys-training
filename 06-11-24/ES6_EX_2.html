@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style>
+      div {
+        border: 1px solid #f8761f;
+        padding: 10px;
+        width: 400px;
+        border-radius: 5px;
+        border-top-width: 10px;
+        background-color: #fefaf7;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Advanced JavaScript -- ES6/ES7</h3>
+    <hr />
+
+    <input type="button" value="Get  Data" onclick="buttonClick()" />
+
+    <br /><br />
+
+    <div id="div1"></div>
+    <div id="div2"></div>
+
+    <script>
+      let divObj1 = document.getElementById("div1");
+      let divObj2 = document.getElementById("div2");
+
+      function checkArrayDestructuring() {
+        let ar = [10, 20, 30];
+        let [x, y, z] = ar; //  Array destructuring
+
+        let str = `X = ${x},  Y = ${y}, Z = ${z}`;
+        divObj1.innerHTML += "<br/>" + str;
+      }
+
+      function checkObjectDestructuring() {
+        let obj = { sid: 4564, sname: "Scott", age: 25 };
+        let { sid, sname } = obj; //  Object destructuring
+
+        let str = `Student Id :  ${sid}, Student Name : ${sname}`;
+
+        divObj2.innerHTML += "<br/>" + str;
+      }
+
+      function buttonClick() {
+        divObj1.innerHTML = "<u>Working with Array Destructuring</u> <br/>";
+        divObj2.innerHTML = "<u>Working with Object Destructuring</u> <br/>";
+
+        checkArrayDestructuring();
+        checkObjectDestructuring();
+      }
+    </script>
+  </body>
+</html>
