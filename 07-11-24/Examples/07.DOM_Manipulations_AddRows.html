@@ -1,0 +1,73 @@
+<html>
+
+<head></head>
+
+<body>
+	<h3>JavaScript Programming -- Array Of Objects - Dynamic DOM </h3>
+	<hr />
+
+
+	<input type="button" value="Add Rows" onclick="fn_addRows()" />
+	<input type="button" value="Remove Row" onclick="fn_removeRow()" />
+
+	<br /><br />
+	<table id="table1" border="2" width="500" cellpadding="10" cellspacing="0">
+		<tr>
+			<th>S.No</th>
+			<th>Student Name</th>
+			<th>Skillset</th>
+		</tr>
+	</table>
+
+
+	<script>
+
+
+		var studentsArray = [
+			{ sid: 454545, sname: "Swapna", skillset: "Angular" },
+			{ sid: 454546, sname: "Eram", skillset: "React" },
+			{ sid: 454547, sname: "Manika", skillset: "Node JS" },
+			{ sid: 454548, sname: "Riya", skillset: "HTML5" },
+			{ sid: 454549, sname: "Vasundara", skillset: "Angular" },
+			{ sid: 454542, sname: "Ambika", skillset: "Bootstrap" },
+			{ sid: 454543, sname: "Deepika", skillset: "jQuery" },
+			{ sid: 454544, sname: "Sonali", skillset: "Angular" },
+			{ sid: 454541, sname: "Natasha", skillset: "React" },
+			{ sid: 454555, sname: "Arpita", skillset: "VueJS" },
+			{ sid: 454666, sname: "Isha", skillset: "UI Fullstack" },
+		];
+
+
+
+		function fn_addRows() {
+
+			var tableObj = document.getElementById("table1");
+
+			for (let i = 0; i < studentsArray.length; i++) {
+
+				var row = tableObj.insertRow(-1);	// insert at last place
+
+				var cell1 = row.insertCell(0);
+				var cell2 = row.insertCell(1);
+				var cell3 = row.insertCell(2);
+
+				cell1.innerHTML = studentsArray[i].sid;
+				cell2.innerHTML = studentsArray[i].sname;
+				cell3.innerHTML = studentsArray[i].skillset;
+			}
+		}
+
+
+		function  fn_removeRow()
+		{
+			var tableObj = document.getElementById("table1");
+			tableObj.deleteRow(1);
+		}
+
+	</script>
+
+
+
+</body>
+
+</html>

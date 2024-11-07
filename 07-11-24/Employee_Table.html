@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic Table</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 2px solid grey;
+        padding: 8px;
+        text-align: left;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+      form {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Employee Table</h2>
+
+    <form id="employeeForm">
+      <input type="text" id="empno" placeholder="Empno" required />
+      <input type="text" id="ename" placeholder="Ename" required />
+      <input type="text" id="job" placeholder="Job" required />
+      <input type="number" id="salary" placeholder="Salary" required />
+      <button type="submit">Add to Table</button>
+    </form>
+
+    <table id="employeeTable">
+      <thead>
+        <tr>
+          <th>Empno</th>
+          <th>Ename</th>
+          <th>Job</th>
+          <th>Salary</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script>
+      function addRow(event) {
+        event.preventDefault();
+
+        const empno = document.getElementById("empno").value;
+        const ename = document.getElementById("ename").value;
+        const job = document.getElementById("job").value;
+        const salary = document.getElementById("salary").value;
+        if (!empno || !ename || !job || !salary) {
+          alert("Please fill in all fields.");
+          return;
+        }
+        const table = document
+          .getElementById("employeeTable")
+          .getElementsByTagName("tbody")[0];
+        const row = table.insertRow();
+        const cell1 = row.insertCell(0);
+        const cell2 = row.insertCell(1);
+        const cell3 = row.insertCell(2);
+        const cell4 = row.insertCell(3);
+        cell1.textContent = empno;
+        cell2.textContent = ename;
+        cell3.textContent = job;
+        cell4.textContent = salary;
+        document.getElementById("employeeForm").reset();
+      }
+
+      document
+        .getElementById("employeeForm")
+        .addEventListener("submit", addRow);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming --  Dynamic DOM  </h3>
+		<hr/>
+		
+		
+		<input type="button"   value="Add P Tag -- Body"   onclick="fn_addParagraphToBody()"  />
+		<input type="button"   value="Add P Tag -- Div"   onclick="fn_addParagraphToDiv()"  />
+		<br/><br/>
+		
+		
+		<div  id="div1"  style="border:1px solid gray; padding: 10px;">
+		
+		</div>
+	 
+		<hr/>
+	 
+		
+		<script>	
+		 
+			  function fn_addParagraphToBody()
+			  {		 
+				 let paraObj = document.createElement("p");
+				 paraObj.setAttribute("id","para1");
+				 paraObj.innerHTML = "New Paragraph element added using javascript";
+				 document.body.appendChild(paraObj);
+			  }		
+
+
+
+			  
+			    function fn_addParagraphToDiv()
+			  {
+					var  paraObj  =  document.createElement("p");	
+					paraObj.setAttribute("id", "p2");				 
+					paraObj.setAttribute("align", "center");				 
+					paraObj.innerHTML = "Welcome to Dynamic DOM";
+						
+					var divObj =  document.getElementById("div1")
+					divObj.appendChild(  paraObj );
+			  }		
+			 
+			 
+		</script>
+		 
+	</body>
+</html>

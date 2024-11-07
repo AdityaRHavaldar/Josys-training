@@ -1,0 +1,48 @@
+<html>
+
+ <head></head>
+
+ <body>
+
+ <h3>JavaScript Programming -- DOM </h3>
+ <hr/>
+
+
+ Select Image :  
+ <select id="select1" onchange="updateImage()">
+	<option>Image1.jpg</option>
+	<option>Image2.jpg</option>
+	<option>Image3.jpg</option>
+	<option>Image4.jpg</option>
+	<option>Image5.jpg</option>
+ </select>
+<hr/>
+ <img  src="Images/Image1.jpg" border="2" width="200" height="200"  id="img1"  />
+
+
+ 
+
+ <script>
+ 
+ 
+ function     updateImage()
+ {
+
+	var selectObj = document.getElementById("select1");
+    var imgObj  = document.getElementById("img1");
+   	imgObj.src = "Images/" + selectObj.value;   
+ }
+
+ 
+ </script>
+
+ </body>
+
+</html>
+
+
+
+
+
+
+

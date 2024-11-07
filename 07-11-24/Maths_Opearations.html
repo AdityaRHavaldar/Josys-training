@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mathematical Operations</title>
+    <style>
+      .container {
+        padding: 8px;
+        border: 2px solid grey;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="calcForm">
+        <label for="firstNumber">First Number:</label>
+        <input type="number" id="firstNumber" required />
+        <br /><br />
+        <label for="secondNumber">Second Number:</label>
+        <input type="number" id="secondNumber" required />
+        <br /><br />
+        <button type="button" id="addBtn">Add</button>
+        <button type="button" id="subBtn">Sub</button>
+        <button type="button" id="mulBtn">Multiply</button>
+        <button type="button" id="divBtn">Div</button>
+      </form>
+      <br />
+      <p id="result"></p>
+    </div>
+
+    <script>
+      const firstNumberInput = document.getElementById("firstNumber");
+      const secondNumberInput = document.getElementById("secondNumber");
+      const resultElement = document.getElementById("result");
+
+      const calculate = (operation) => {
+        const firstNumber = parseFloat(firstNumberInput.value);
+        const secondNumber = parseFloat(secondNumberInput.value);
+
+        let result;
+        switch (operation) {
+          case "add":
+            result = firstNumber + secondNumber;
+            break;
+          case "subtract":
+            result = firstNumber - secondNumber;
+            break;
+          case "multiply":
+            result = firstNumber * secondNumber;
+            break;
+          case "divide":
+            if (secondNumber === 0) {
+              result = "Division by zero error!";
+            } else {
+              result = firstNumber / secondNumber;
+            }
+            break;
+          default:
+            result = "Invalid operation!";
+        }
+
+        resultElement.textContent = `Result: ${result}`;
+      };
+
+      document.getElementById("calcForm").addEventListener("click", (event) => {
+        if (event.target.tagName === "BUTTON") {
+          const buttonId = event.target.id;
+          let operation;
+
+          if (buttonId === "addBtn") {
+            operation = "add";
+          } else if (buttonId === "subBtn") {
+            operation = "subtract";
+          } else if (buttonId === "mulBtn") {
+            operation = "multiply";
+          } else if (buttonId === "divBtn") {
+            operation = "divide";
+          }
+
+          if (operation) {
+            calculate(operation);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

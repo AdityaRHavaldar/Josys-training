@@ -1,0 +1,42 @@
+<html>
+	<head></head>
+	<body>
+		<h3>JavaScript Programming -- DOM </h3>
+		<hr/>
+
+		<button onclick="buttonClick()">Update Content</button>
+		<hr/>
+		
+		<p  id="p1">Hello World</p>
+		<hr/>
+		
+		User Name  :   <input type="text"  id="t1"  value="Scott"  />		
+		<hr/>
+		 
+		 <img  src="Images/Image1.jpg"  width="200" height="200"  id="img1"  />
+		 
+
+		
+		<script>
+
+			function buttonClick(){
+
+				var  paraObj  =  document.getElementById("p1");		
+				var  txtObj  =  document.getElementById("t1");		
+				var  imgObj  =  document.getElementById("img1");		
+				
+
+				alert( paraObj.innerHTML );
+				alert( txtObj.value );
+				alert( imgObj.src );
+
+
+				paraObj.innerHTML = "Message prepared using JavaScript";
+				txtObj.value =  "Narasimha";
+				imgObj.src =  "Images/Image3.jpg";
+			}
+				
+				 
+		</script> 		
+	</body>
+</html>

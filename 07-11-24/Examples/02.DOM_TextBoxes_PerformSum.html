@@ -1,0 +1,43 @@
+<html>
+
+ <head></head>
+
+ <body>
+
+ <h3>JavaScript Programming -- DOM </h3>
+
+ <hr/>
+
+ First Number  :  <input type="text" id="t1"  />
+<br/><br/>
+ Second Number  :  <input type="text" id="t2" />
+<br/><br/>
+<input type="button"  value="Sum"  onclick="sum_click()"  />  
+ <p id="p1"> </p>
+
+ <script>
+ 
+ 
+ function     sum_click()
+ {
+	var txtObj1 = document.getElementById("t1");
+    var txtObj2  = document.getElementById("t2");
+    var paraObj = document.getElementById("p1");
+	
+	let result = parseInt(txtObj1.value) + parseInt(txtObj2.value);
+	paraObj.innerHTML  = "Sum Result : " + result; 
+ }
+
+ 
+ </script>
+
+ </body>
+
+</html>
+
+
+
+
+
+
+

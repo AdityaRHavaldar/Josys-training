@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Product Details</title>
+    <style>
+      .container {
+        padding: 8px;
+        border: 2px solid grey;
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form id="productForm">
+        <label for="productName">Product Name:</label>
+        <input type="text" id="productName" required />
+        <br /><br />
+        <label for="unitPrice">Unit Price:</label>
+        <input type="number" id="unitPrice" required />
+        <br /><br />
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" required />
+        <br /><br />
+        <button type="submit">Get Total</button>
+      </form>
+
+      <br /><br />
+      <div id="totalAmount">
+        Total Amount: <span id="totalAmountValue"></span>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("productForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          buttonClick();
+        });
+
+      function buttonClick() {
+        const productName = document.getElementById("productName").value;
+        const unitPrice = parseInt(document.getElementById("unitPrice").value);
+        const quantity = parseInt(document.getElementById("quantity").value);
+
+        let totalAmount = unitPrice * quantity;
+
+        if (quantity > 30) {
+          totalAmount *= 1 - 0.2;
+        } else if (quantity > 20) {
+          totalAmount *= 1 - 0.15;
+        } else if (quantity > 10) {
+          totalAmount *= 1 - 0.1;
+        }
+
+        if (
+          confirm(
+            `Are you sure you want to proceed with the total amount of ${totalAmount}?`
+          )
+        ) {
+          document.getElementById("totalAmountValue").textContent = totalAmount;
+        } else {
+          document.getElementById("totalAmountValue").textContent = "";
+        }
+      }
+    </script>
+  </body>
+</html>
