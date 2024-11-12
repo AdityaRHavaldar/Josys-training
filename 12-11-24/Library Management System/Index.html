@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Library Management System</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      .row {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      .container {
+        width: 48%;
+      }
+      .button {
+        margin-top: 10px;
+        padding: 8px 12px;
+        background-color: #e8ed7a;
+        color: black;
+        border: 1px solid black;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 1px 2px 4px grey;
+      }
+      select {
+        width: 80%;
+        padding: 8px;
+        margin: 5px 0;
+      }
+      input {
+        width: 76%;
+        padding: 8px;
+        margin: 5px 0;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid #ccc;
+      }
+      th,
+      td {
+        padding: 8px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+      th {
+        background-color: #f4f4f4;
+      }
+      ol {
+        padding-left: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Library Management System</h2>
+
+    <div class="row">
+      <div class="container">
+        <h3>Available Books</h3>
+        <ul id="available-books"></ul>
+      </div>
+      <div class="container">
+        <h3>Add a Book to Library</h3>
+        <input type="text" id="new-book-name" placeholder="Book name" />
+        <input
+          type="text"
+          id="new-book-author"
+          placeholder="Author name"
+        /><br />
+        <button id="add-to-library-btn" class="button">Add to Library</button>
+      </div>
+      <div class="container">
+        <h3>Members Table</h3>
+        <table id="members-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Borrowed Books</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="container">
+        <h3>Create Library Member</h3>
+        <input
+          type="text"
+          id="member-name"
+          placeholder="Enter your name"
+        /><br />
+        <button id="create-member-btn" class="button">Create Member</button>
+      </div>
+      <div class="container">
+        <h3>Borrow a Book</h3>
+        <select id="borrow-user-select">
+          <option value="">Select a User</option>
+        </select>
+        <select id="borrow-book-select">
+          <option value="">Select a Book</option>
+        </select>
+        <button id="borrow-book-btn" class="button">Borrow Book</button>
+      </div>
+      <div class="container">
+        <h3>Return a Book</h3>
+        <select id="return-user-select">
+          <option value="">Select a User</option>
+        </select>
+        <select id="return-book-select">
+          <option value="">Select a Borrowed Book</option>
+        </select>
+        <button id="return-book-btn" class="button">Return Book</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="container">
+        <h3>Transaction History</h3>
+        <table id="transaction-table">
+          <thead>
+            <tr>
+              <th>Action</th>
+              <th>User</th>
+              <th>Book</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script>
+      function createBook(title, author) {
+        return {
+          title: title,
+          author: author,
+          isBorrowed: false,
+        };
+      }
+
+      function User(name) {
+        this.name = name;
+        this.borrowedBooks = [];
+      }
+
+      User.prototype.borrowBook = function (book) {
+        if (!book.isBorrowed) {
+          book.isBorrowed = true;
+          this.borrowedBooks.push(book);
+          logTransaction("Borrow", this.name, book);
+        } else {
+          alert(`Sorry, "${book.title}" is not available.`);
+        }
+      };
+
+      User.prototype.returnBook = function (book) {
+        const index = this.borrowedBooks.indexOf(book);
+        if (index !== -1) {
+          book.isBorrowed = false;
+          this.borrowedBooks.splice(index, 1);
+          logTransaction("Return", this.name, book);
+        } else {
+          alert(`${this.name} hasn't borrowed "${book.title}"`);
+        }
+      };
+
+      function LibraryMember(name, membershipId) {
+        User.call(this, name);
+        this.membershipId = membershipId;
+      }
+
+      LibraryMember.prototype = Object.create(User.prototype);
+      LibraryMember.prototype.constructor = LibraryMember;
+
+      const Library = {
+        books: [],
+        members: [],
+        addBook: function (book) {
+          this.books.push(book);
+        },
+        getAvailableBooks: function () {
+          return this.books.filter((book) => !book.isBorrowed);
+        },
+      };
+
+      Library.addBook(createBook("Ikigai", "Archit"));
+      Library.addBook(createBook("Money", "Aviral"));
+      Library.addBook(createBook("Rich dad Poor dad", "Aditya"));
+      Library.addBook(createBook("Thinking fast and slow", "Rijesh"));
+      Library.addBook(createBook("Grandmas Bag of Stories", "Sudha murthy"));
+      Library.addBook(createBook("Manika", "Priyanka"));
+
+      const availableBooksList = document.getElementById("available-books");
+      const borrowUserSelect = document.getElementById("borrow-user-select");
+      const borrowBookSelect = document.getElementById("borrow-book-select");
+      const returnUserSelect = document.getElementById("return-user-select");
+      const returnBookSelect = document.getElementById("return-book-select");
+      const borrowBookBtn = document.getElementById("borrow-book-btn");
+      const returnBookBtn = document.getElementById("return-book-btn");
+      const memberNameInput = document.getElementById("member-name");
+      const createMemberBtn = document.getElementById("create-member-btn");
+      const membersTableBody = document
+        .getElementById("members-table")
+        .getElementsByTagName("tbody")[0];
+      const newBookNameInput = document.getElementById("new-book-name");
+      const newBookAuthorInput = document.getElementById("new-book-author");
+      const addToLibraryBtn = document.getElementById("add-to-library-btn");
+      const transactionLogBody = document
+        .getElementById("transaction-table")
+        .getElementsByTagName("tbody")[0];
+
+      function logTransaction(action, user, book) {
+        const row = transactionLogBody.insertRow();
+        const actionCell = row.insertCell(0);
+        const userCell = row.insertCell(1);
+        const bookCell = row.insertCell(2);
+        const timeCell = row.insertCell(3);
+
+        actionCell.textContent = action;
+        userCell.textContent = user;
+        bookCell.textContent = `${book.title} by ${book.author}`;
+        timeCell.textContent =
+          new Date().toLocaleTimeString() +
+          " " +
+          new Date().toLocaleDateString();
+      }
+
+      function updateAvailableBooks() {
+        availableBooksList.innerHTML = "";
+        const availableBooks = Library.getAvailableBooks();
+        borrowBookSelect.innerHTML = "<option value=''>Select a Book</option>";
+
+        availableBooks.forEach((book) => {
+          const li = document.createElement("li");
+          li.textContent = `${book.title} by ${book.author}`;
+          availableBooksList.appendChild(li);
+
+          const option = document.createElement("option");
+          option.value = book.title;
+          option.textContent = `${book.title} by ${book.author}`;
+          borrowBookSelect.appendChild(option);
+        });
+      }
+
+      function updateReturnBooks() {
+        returnBookSelect.innerHTML =
+          "<option value=''>Select a Borrowed Book</option>";
+
+        const selectedUser = Library.members.find(
+          (member) => member.name === returnUserSelect.value
+        );
+        if (selectedUser) {
+          selectedUser.borrowedBooks.forEach((book) => {
+            const option = document.createElement("option");
+            option.value = book.title;
+            option.textContent = `${book.title} by ${book.author}`;
+            returnBookSelect.appendChild(option);
+          });
+        }
+      }
+
+      function updateMembersTable() {
+        membersTableBody.innerHTML = "";
+        Library.members.forEach((member) => {
+          const row = membersTableBody.insertRow();
+          const nameCell = row.insertCell(0);
+          const borrowedBooksCell = row.insertCell(1);
+
+          nameCell.textContent = member.name;
+
+          const ol = document.createElement("ol");
+          member.borrowedBooks.forEach((book) => {
+            const li = document.createElement("li");
+            li.textContent = `${book.title} by ${book.author}`;
+            ol.appendChild(li);
+          });
+          borrowedBooksCell.appendChild(ol);
+        });
+      }
+
+      function populateUserSelects() {
+        borrowUserSelect.innerHTML = "<option value=''>Select a User</option>";
+        returnUserSelect.innerHTML = "<option value=''>Select a User</option>";
+
+        Library.members.forEach((member) => {
+          const option = document.createElement("option");
+          option.value = member.name;
+          option.textContent = member.name;
+
+          borrowUserSelect.appendChild(option);
+          returnUserSelect.appendChild(option.cloneNode(true));
+        });
+      }
+
+      createMemberBtn.addEventListener("click", () => {
+        const name = memberNameInput.value.trim();
+        if (name) {
+          const membershipId = `M${Math.floor(Math.random() * 10000)}`;
+          const newMember = new LibraryMember(name, membershipId);
+          Library.members.push(newMember);
+          memberNameInput.value = "";
+
+          populateUserSelects();
+          alert(`Library member created: ${name}`);
+          updateMembersTable();
+        } else {
+          alert("Please enter your name.");
+        }
+      });
+
+      borrowUserSelect.addEventListener("change", () => {
+        const selectedUser = Library.members.find(
+          (member) => member.name === borrowUserSelect.value
+        );
+        if (selectedUser) {
+          borrowBookSelect.innerHTML =
+            "<option value=''>Select a Book</option>";
+          const availableBooks = Library.getAvailableBooks();
+          availableBooks.forEach((book) => {
+            const option = document.createElement("option");
+            option.value = book.title;
+            option.textContent = `${book.title} by ${book.author}`;
+            borrowBookSelect.appendChild(option);
+          });
+        }
+      });
+
+      borrowBookBtn.addEventListener("click", () => {
+        const selectedUser = Library.members.find(
+          (member) => member.name === borrowUserSelect.value
+        );
+        const bookTitle = borrowBookSelect.value;
+        const book = Library.books.find((b) => b.title === bookTitle);
+
+        if (selectedUser && book) {
+          selectedUser.borrowBook(book);
+          updateAvailableBooks();
+          updateMembersTable();
+          updateReturnBooks();
+        } else {
+          alert("Please select a valid user and book.");
+        }
+      });
+
+      returnUserSelect.addEventListener("change", updateReturnBooks);
+
+      returnBookBtn.addEventListener("click", () => {
+        const selectedUser = Library.members.find(
+          (member) => member.name === returnUserSelect.value
+        );
+        const bookTitle = returnBookSelect.value;
+        const book = selectedUser.borrowedBooks.find(
+          (b) => b.title === bookTitle
+        );
+
+        if (selectedUser && book) {
+          selectedUser.returnBook(book);
+          updateAvailableBooks();
+          updateMembersTable();
+          updateReturnBooks();
+        } else {
+          alert("Please select a valid user and borrowed book.");
+        }
+      });
+
+      addToLibraryBtn.addEventListener("click", () => {
+        const bookName = newBookNameInput.value.trim();
+        const authorName = newBookAuthorInput.value.trim();
+
+        if (bookName && authorName) {
+          const newBook = createBook(bookName, authorName);
+          Library.addBook(newBook);
+          newBookNameInput.value = "";
+          newBookAuthorInput.value = "";
+
+          updateAvailableBooks();
+          alert(`Book "${bookName}" by ${authorName} added to the library.`);
+        } else {
+          alert("Please enter both book name and author.");
+        }
+      });
+
+      updateAvailableBooks();
+      populateUserSelects();
+    </script>
+  </body>
+</html>
