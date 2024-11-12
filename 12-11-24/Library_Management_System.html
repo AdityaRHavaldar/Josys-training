@@ -10,7 +10,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px;
+        padding: 40px;
       }
       .row {
         display: flex;
@@ -155,48 +155,6 @@
     </div>
 
     <script>
-      function createBook(title, author) {
-        return {
-          title: title,
-          author: author,
-          isBorrowed: false,
-        };
-      }
-
-      function User(name) {
-        this.name = name;
-        this.borrowedBooks = [];
-      }
-
-      User.prototype.borrowBook = function (book) {
-        if (!book.isBorrowed) {
-          book.isBorrowed = true;
-          this.borrowedBooks.push(book);
-          logTransaction("Borrow", this.name, book);
-        } else {
-          alert(`Sorry, "${book.title}" is not available.`);
-        }
-      };
-
-      User.prototype.returnBook = function (book) {
-        const index = this.borrowedBooks.indexOf(book);
-        if (index !== -1) {
-          book.isBorrowed = false;
-          this.borrowedBooks.splice(index, 1);
-          logTransaction("Return", this.name, book);
-        } else {
-          alert(`${this.name} hasn't borrowed "${book.title}"`);
-        }
-      };
-
-      function LibraryMember(name, membershipId) {
-        User.call(this, name);
-        this.membershipId = membershipId;
-      }
-
-      LibraryMember.prototype = Object.create(User.prototype);
-      LibraryMember.prototype.constructor = LibraryMember;
-
       const Library = {
         books: [],
         members: [],
@@ -233,6 +191,47 @@
       const transactionLogBody = document
         .getElementById("transaction-table")
         .getElementsByTagName("tbody")[0];
+
+      function createBook(title, author) {
+        return {
+          title: title,
+          author: author,
+          isBorrowed: false,
+        };
+      }
+
+      function User(name) {
+        this.name = name;
+        this.borrowedBooks = [];
+      }
+
+      User.prototype.borrowBook = function (book) {
+        if (!book.isBorrowed) {
+          book.isBorrowed = true;
+          this.borrowedBooks.push(book);
+          logTransaction("Borrow", this.name, book);
+        } else {
+          alert(`Sorry, "${book.title}" is not available.`);
+        }
+      };
+
+      User.prototype.returnBook = function (book) {
+        const index = this.borrowedBooks.indexOf(book);
+        if (index !== -1) {
+          book.isBorrowed = false;
+          this.borrowedBooks.splice(index, 1);
+          logTransaction("Return", this.name, book);
+        } else {
+          alert(`${this.name} hasn't borrowed "${book.title}"`);
+        }
+      };
+
+      function LibraryMember(memberName) {
+        User.call(memberName);
+        console.log(this);
+      }
+
+      LibraryMember.prototype = Object.create(User.prototype);
 
       function logTransaction(action, user, book) {
         const row = transactionLogBody.insertRow();
@@ -320,8 +319,7 @@
       createMemberBtn.addEventListener("click", () => {
         const name = memberNameInput.value.trim();
         if (name) {
-          const membershipId = `M${Math.floor(Math.random() * 10000)}`;
-          const newMember = new LibraryMember(name, membershipId);
+          const newMember = new LibraryMember(name);
           Library.members.push(newMember);
           memberNameInput.value = "";
 
