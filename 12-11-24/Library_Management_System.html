@@ -21,15 +21,24 @@
       .container {
         width: 48%;
       }
-      .button {
+      button {
         margin-top: 10px;
         padding: 8px 12px;
-        background-color: #e8ed7a;
-        color: black;
+        color: white;
         border: 1px solid black;
         border-radius: 4px;
         cursor: pointer;
         box-shadow: 1px 2px 4px grey;
+      }
+
+      .createButton {
+        background-color: #7aa2ed;
+      }
+      .borrowButton {
+        background-color: #7ed067;
+      }
+      .returnButton {
+        background-color: #da4b4b;
       }
       select {
         width: 80%;
@@ -76,7 +85,9 @@
           id="new-book-author"
           placeholder="Author name"
         /><br />
-        <button id="add-to-library-btn" class="button">Add to Library</button>
+        <button id="add-to-library-btn" class="createButton">
+          Add to Library
+        </button>
       </div>
       <div class="container">
         <h3>Members Table</h3>
@@ -100,7 +111,9 @@
           id="member-name"
           placeholder="Enter your name"
         /><br />
-        <button id="create-member-btn" class="button">Create Member</button>
+        <button id="create-member-btn" class="createButton">
+          Create Member
+        </button>
       </div>
       <div class="container">
         <h3>Borrow a Book</h3>
@@ -110,7 +123,7 @@
         <select id="borrow-book-select">
           <option value="">Select a Book</option>
         </select>
-        <button id="borrow-book-btn" class="button">Borrow Book</button>
+        <button id="borrow-book-btn" class="borrowButton">Borrow Book</button>
       </div>
       <div class="container">
         <h3>Return a Book</h3>
@@ -120,7 +133,7 @@
         <select id="return-book-select">
           <option value="">Select a Borrowed Book</option>
         </select>
-        <button id="return-book-btn" class="button">Return Book</button>
+        <button id="return-book-btn" class="returnButton">Return Book</button>
       </div>
     </div>
 
