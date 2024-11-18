@@ -1,0 +1,14 @@
+.customerTable {
+  margin: 20px auto;
+}
+
+.customerTable th,
+td {
+  border-collapse: collapse;
+  border: 1px solid gray;
+}
+
+.customerDetailsContainer {
+  text-align: center;
+  margin: auto;
+}

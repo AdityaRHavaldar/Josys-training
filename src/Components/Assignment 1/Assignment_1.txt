@@ -1,0 +1,28 @@
+1.  What is useMemo() hook? Study more details with example?
+
+Ans : useMemo is a react hook that can be used to hold a value of a Complex / Expensive Operations. Imagine dealing with a complex calculation, for each rendering the calculation happens.
+      This will affect the performance of the application. In this situation we can use the useMemo Hook to hold the value of the calculation. only on changes in the depndancy recalculate the value.
+
+import { useMemo, useState } from "react";
+
+function Assignment_1() {
+  const [count, setCount] = useState(0);
+
+  const largeArray = useMemo(() => {
+    const array = [];
+    for (let i = 0; i < 100000; i++) {
+      array.push(i);
+    }
+    return array;
+  }, []); // It will be performed only once
+
+  return (
+    <div>
+      <label>Assignment 1, useMemo</label>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+
+export default Assignment_1;
