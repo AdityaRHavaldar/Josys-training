@@ -1,0 +1,10 @@
+.UserTable {
+  width: 60%;
+  margin: auto;
+}
+
+.UserTable th,
+td {
+  border-collapse: collapse;
+  border: 1px solid grey;
+}
