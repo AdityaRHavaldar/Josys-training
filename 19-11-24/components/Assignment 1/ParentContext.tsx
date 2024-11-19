@@ -25,6 +25,11 @@ class ParentContext extends Component {
       <div>
         <div style={{ margin: "10px", border: "2px solid red" }}>
           <h3>This is Parent Component using Class component</h3>
+          <p>
+            We have 3 phases in the context API, At first we create the Context in the parent component which provides the value.
+            access and utilise the value in the child components withous passing it as props to inbetween children components.
+            finally consume the value where ever needed.
+          </p>
           <hr />
 
           {/* 2. Context Provider */}
