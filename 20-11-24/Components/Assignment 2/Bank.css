@@ -1,0 +1,36 @@
+.button {
+  padding: 5px 8px;
+  border: none;
+  border-radius: 4px;
+}
+
+.Deposit {
+  background-color: greenyellow;
+}
+
+.Withdraw {
+  background-color: rgb(76, 156, 206);
+}
+
+.Balance {
+  background-color: rgb(243, 176, 68);
+}
+
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.bankContainer {
+  display: flex;
+  gap: 5%;
+  justify-content: center;
+}
+
+.input {
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin: 3px;
+}
