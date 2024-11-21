@@ -282,15 +282,17 @@ const UserCrud: React.FC = () => {
               type="submit"
               className="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-700"
             >
-              Submit
+              {selectedUser ? "Update" : "Submit"}
             </button>
-            <button
-              type="button"
-              onClick={handleCancel}
-              className="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-700"
-            >
-              Cancel
-            </button>
+            {selectedUser && (
+              <button
+                type="button"
+                onClick={handleCancel}
+                className="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-700"
+              >
+                Cancel
+              </button>
+            )}
           </div>
         </form>
       </section>
