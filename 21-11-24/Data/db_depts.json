@@ -1,0 +1,33 @@
+{
+  "depts": [
+    {
+      "deptno": 10,
+      "dname": "Accounts",
+      "loc": "Hydrabad"
+    },
+    {
+      "deptno": 40,
+      "dname": "Marketing",
+      "loc": "Pune",
+      "id": "98da"
+    },
+    {
+      "deptno": 30,
+      "dname": "Admin",
+      "loc": "Mumbai",
+      "id": "7784"
+    },
+    {
+      "deptno": 20,
+      "dname": "Sales",
+      "loc": "Chennai",
+      "id": "fbf7"
+    },
+    {
+      "id": "399a",
+      "deptno": 32,
+      "dname": "software",
+      "loc": "Bengaluru"
+    }
+  ]
+}

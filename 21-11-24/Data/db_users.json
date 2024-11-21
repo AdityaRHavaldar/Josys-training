@@ -1,0 +1,862 @@
+{
+  "customers": [
+    {
+      "CustomerId": 1,
+      "Name": "Aarav Sharma",
+      "City": "Delhi",
+      "ContactNumber": "9876543210",
+      "Year": 2020,
+      "Photo": "https://randomuser.me/api/portraits/men/40.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 150
+        },
+        {
+          "name": "Bermuda",
+          "price": 120
+        },
+        {
+          "name": "Fescue",
+          "price": 130
+        },
+        {
+          "name": "Zoysia",
+          "price": 120
+        },
+        {
+          "name": "St. Augustine",
+          "price": 140
+        },
+        {
+          "name": "Buffalo",
+          "price": 150
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 170
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 160
+        },
+        {
+          "name": "Carpetgrass",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "CustomerId": 2,
+      "Name": "Isha Gupta",
+      "City": "Mumbai",
+      "ContactNumber": "9988776655",
+      "Year": 2019,
+      "Photo": "https://randomuser.me/api/portraits/women/42.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Bermuda",
+          "price": 160
+        },
+        {
+          "name": "Fescue",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "St. Augustine",
+          "price": 150
+        },
+        {
+          "name": "Buffalo",
+          "price": 180
+        },
+        {
+          "name": "Ryegrass",
+          "price": 170
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 3,
+      "Name": "Rohan Patel",
+      "City": "Ahmedabad",
+      "ContactNumber": "9871234567",
+      "Year": 2021,
+      "Photo": "https://randomuser.me/api/portraits/men/43.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Bermuda",
+          "price": 160
+        },
+        {
+          "name": "Fescue",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "St. Augustine",
+          "price": 190
+        },
+        {
+          "name": "Buffalo",
+          "price": 200
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 170
+        },
+        {
+          "name": "Carpetgrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 4,
+      "Name": "Priya Verma",
+      "City": "Bangalore",
+      "ContactNumber": "9900876543",
+      "Year": 2018,
+      "Photo": "https://randomuser.me/api/portraits/women/24.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "St. Augustine",
+          "price": 190
+        },
+        {
+          "name": "Buffalo",
+          "price": 200
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 170
+        },
+        {
+          "name": "Carpetgrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 5,
+      "Name": "Vikram Singh",
+      "City": "Chennai",
+      "ContactNumber": "9999888777",
+      "Year": 2022,
+      "Photo": "https://randomuser.me/api/portraits/men/45.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Bermuda",
+          "price": 160
+        },
+        {
+          "name": "St. Augustine",
+          "price": 190
+        },
+        {
+          "name": "Buffalo",
+          "price": 200
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 6,
+      "Name": "Neha Rao",
+      "City": "Hyderabad",
+      "ContactNumber": "9888776655",
+      "Year": 2020,
+      "Photo": "https://randomuser.me/api/portraits/women/46.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Bermuda",
+          "price": 160
+        },
+        {
+          "name": "Fescue",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "CustomerId": 7,
+      "Name": "Siddharth Kumar",
+      "City": "Kolkata",
+      "ContactNumber": "9990001122",
+      "Year": 2021,
+      "Photo": "https://randomuser.me/api/portraits/men/47.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Bermuda",
+          "price": 160
+        },
+        {
+          "name": "Fescue",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "St. Augustine",
+          "price": 190
+        },
+        {
+          "name": "Buffalo",
+          "price": 200
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 170
+        },
+        {
+          "name": "Carpetgrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 8,
+      "Name": "Kiran Joshi",
+      "City": "Pune",
+      "ContactNumber": "9876543210",
+      "Year": 2023,
+      "Photo": "https://randomuser.me/api/portraits/women/48.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Creeping Red Fescue",
+          "price": 160
+        },
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Bermuda",
+          "price": 160
+        },
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "St. Augustine",
+          "price": 200
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Ryegrass",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "CustomerId": 9,
+      "Name": "Amit Desai",
+      "City": "Surat",
+      "ContactNumber": "9999887766",
+      "Year": 2021,
+      "Photo": "https://randomuser.me/api/portraits/men/49.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "Fescue",
+          "price": 170
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "St. Augustine",
+          "price": 200
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "CustomerId": 10,
+      "Name": "Suman Agarwal",
+      "City": "Lucknow",
+      "ContactNumber": "9997778888",
+      "Year": 2024,
+      "Photo": "https://randomuser.me/api/portraits/women/30.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Carpetgrass",
+          "price": 160
+        },
+        {
+          "name": "Bluegrass",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "Fescue",
+          "price": 160
+        },
+        {
+          "name": "Ryegrass",
+          "price": 180
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "CustomerId": 11,
+      "Name": "Rajesh Mehra",
+      "City": "Jaipur",
+      "ContactNumber": "9888887766",
+      "Year": 2022,
+      "Photo": "https://randomuser.me/api/portraits/men/55.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "Ryegrass",
+          "price": 170
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 150
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "CustomerId": 12,
+      "Name": "Nisha Reddy",
+      "City": "Bhopal",
+      "ContactNumber": "9555332211",
+      "Year": 2021,
+      "Photo": "https://randomuser.me/api/portraits/women/22.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "St. Augustine",
+          "price": 200
+        },
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "Ryegrass",
+          "price": 170
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 13,
+      "Name": "Anil Kumar",
+      "City": "Noida",
+      "ContactNumber": "9876543333",
+      "Year": 2023,
+      "Photo": "https://randomuser.me/api/portraits/men/23.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Buffalo",
+          "price": 200
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 150
+        },
+        {
+          "name": "Bahia",
+          "price": 160
+        },
+        {
+          "name": "Ryegrass",
+          "price": 170
+        }
+      ]
+    },
+    {
+      "CustomerId": 14,
+      "Name": "Meena Agarwal",
+      "City": "Indore",
+      "ContactNumber": "9988771122",
+      "Year": 2020,
+      "Photo": "https://randomuser.me/api/portraits/women/54.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Ryegrass",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 160
+        },
+        {
+          "name": "St. Augustine",
+          "price": 180
+        },
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "Bluegrass",
+          "price": 180
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Bentgrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 15,
+      "Name": "Shivani Yadav",
+      "City": "Kanpur",
+      "ContactNumber": "9988773344",
+      "Year": 2023,
+      "Photo": "https://randomuser.me/api/portraits/women/15.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Creeping Red Fescue",
+          "price": 160
+        },
+        {
+          "name": "Ryegrass",
+          "price": 170
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 190
+        },
+        {
+          "name": "Buffalo",
+          "price": 200
+        },
+        {
+          "name": "Bluegrass",
+          "price": 170
+        },
+        {
+          "name": "St. Augustine",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 16,
+      "Name": "Rahul Mehta",
+      "City": "Chandigarh",
+      "ContactNumber": "9776554433",
+      "Year": 2022,
+      "Photo": "https://randomuser.me/api/portraits/men/36.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Fescue",
+          "price": 180
+        },
+        {
+          "name": "Bentgrass",
+          "price": 170
+        },
+        {
+          "name": "Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "Ryegrass",
+          "price": 190
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 180
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Zoysia",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 17,
+      "Name": "Nisha Gupta",
+      "City": "Gurgaon",
+      "ContactNumber": "9912334455",
+      "Year": 2023,
+      "Photo": "https://randomuser.me/api/portraits/women/37.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "Zoysia",
+          "price": 170
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 180
+        },
+        {
+          "name": "Bahia",
+          "price": 190
+        },
+        {
+          "name": "St. Augustine",
+          "price": 160
+        },
+        {
+          "name": "Bluegrass",
+          "price": 170
+        },
+        {
+          "name": "Buffalo",
+          "price": 200
+        }
+      ]
+    },
+    {
+      "CustomerId": 18,
+      "Name": "Kartik Sharma",
+      "City": "Bhopal",
+      "ContactNumber": "9899988777",
+      "Year": 2020,
+      "Photo": "https://randomuser.me/api/portraits/men/38.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Zoysia",
+          "price": 160
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 170
+        },
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 180
+        },
+        {
+          "name": "Ryegrass",
+          "price": 170
+        },
+        {
+          "name": "St. Augustine",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        }
+      ]
+    },
+    {
+      "CustomerId": 19,
+      "Name": "Seema Rani",
+      "City": "Bhubaneswar",
+      "ContactNumber": "9333221100",
+      "Year": 2021,
+      "Photo": "https://randomuser.me/api/portraits/women/39.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Bluegrass",
+          "price": 160
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 170
+        },
+        {
+          "name": "Buffalo",
+          "price": 180
+        },
+        {
+          "name": "St. Augustine",
+          "price": 200
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 170
+        },
+        {
+          "name": "Bahia",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 20,
+      "Name": "Vishal Patel",
+      "City": "Vadodara",
+      "ContactNumber": "9777888877",
+      "Year": 2024,
+      "Photo": "https://randomuser.me/api/portraits/men/70.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "Buffalo",
+          "price": 190
+        },
+        {
+          "name": "Zoysia",
+          "price": 180
+        },
+        {
+          "name": "Bluegrass",
+          "price": 170
+        },
+        {
+          "name": "Ryegrass",
+          "price": 160
+        },
+        {
+          "name": "Bahia",
+          "price": 150
+        },
+        {
+          "name": "Creeping Red Fescue",
+          "price": 170
+        },
+        {
+          "name": "Kentucky Bluegrass",
+          "price": 160
+        }
+      ]
+    },
+    {
+      "CustomerId": 23,
+      "Name": "Ananya",
+      "City": "Bellari",
+      "ContactNumber": "8976451236",
+      "Year": 2022,
+      "Photo": "https://randomuser.me/api/portraits/women/12.jpg",
+      "TotalPurchasesPerYear": [
+        {
+          "name": "rice",
+          "price": 200
+        },
+        {
+          "name": "wheet",
+          "price": 120
+        },
+        {
+          "name": "jawar",
+          "price": 300
+        },
+        {
+          "name": "ragi",
+          "price": 400
+        },
+        {
+          "name": "soap",
+          "price": 155
+        }
+      ]
+    }
+  ]
+}
