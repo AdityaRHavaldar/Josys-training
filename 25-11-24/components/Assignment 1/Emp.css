@@ -1,0 +1,27 @@
+.empTable {
+  margin: auto;
+}
+
+.empTable th {
+  background-color: rgb(227, 227, 227);
+}
+
+.empContainer {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 3%;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  justify-content: space-evenly;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 5%;
+}
+
+.empHeading {
+  text-align: center;
+}

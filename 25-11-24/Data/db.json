@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Aditya",
+      "email": "aditya@gmail.com"
+    },
+    {
+      "id": 2,
+      "name": "Aviral",
+      "email": "aviral@gmail.com"
+    },
+    {
+      "id": 3,
+      "name": "Archit",
+      "email": "aarchit@gmail.com"
+    },
+    {
+      "id": 4,
+      "name": "Sameer",
+      "email": "sameer@gmail.com"
+    },
+    {
+      "id": 5,
+      "name": "Priyanka",
+      "email": "priyanka@gmail.com"
+    },
+    {
+      "id": 6,
+      "name": "Abhai",
+      "email": "abhai@gmail.com"
+    },
+    {
+      "name": "Rijesh",
+      "email": "rijesh@gmail.com",
+      "id": 7
+    },
+    {
+      "name": "Ashish",
+      "email": "ashish@gmail.com",
+      "id": 8
+    },
+    {
+      "name": "Rohit",
+      "email": "rohit@gmail.com",
+      "id": 9
+    },
+    {
+      "name": "testing options1",
+      "email": "6361285873",
+      "id": 10
+    }
+  ],
+  "employees": [
+    {
+      "id": 2,
+      "name": "Neha Sharma",
+      "email": "neha.sharma@company.com",
+      "position": "Product Manager",
+      "department": "Product"
+    },
+    {
+      "id": 3,
+      "name": "Anjali Verma",
+      "email": "anjali.verma@company.com",
+      "position": "UX Designer",
+      "department": "Design"
+    },
+    {
+      "id": 5,
+      "name": "Pooja Patel",
+      "email": "pooja.patel@company.com",
+      "position": "HR Manager",
+      "department": "HR"
+    },
+    {
+      "id": 7,
+      "name": "Amit Agarwal",
+      "email": "amit.agarwal@company.com",
+      "position": "Marketing Manager",
+      "department": "Marketing"
+    },
+    {
+      "id": 8,
+      "name": "Kavita Mehta",
+      "email": "kavita.mehta@company.com",
+      "position": "Finance Analyst",
+      "department": "Finance"
+    },
+    {
+      "id": 9,
+      "name": "Rajesh Iyer",
+      "email": "rajesh.iyer@company.com",
+      "position": "Sales Executive",
+      "department": "Sales"
+    },
+    {
+      "id": 10,
+      "name": "Sushmita Banerjee",
+      "email": "sushmita.banerjee@company.com",
+      "position": "Customer Support",
+      "department": "Support"
+    },
+    {
+      "name": "Aditya",
+      "email": "aditya@gmail.com",
+      "position": "SDE1",
+      "department": "Engineering",
+      "id": 11
+    },
+    {
+      "name": "Aditya R Havaldar",
+      "email": "aditya29101@gmail.com",
+      "position": "SDE1",
+      "department": "Engineering",
+      "id": 12
+    },
+    {
+      "name": "Narasimha",
+      "email": "nrrao@gmail.com",
+      "position": "hr",
+      "department": "Teaching ",
+      "id": 13
+    }
+  ],
+  "vehicles": [
+    {
+      "ownerName": "Aditya",
+      "contactNumber": "9687565478",
+      "model": "suv",
+      "registrationNumber": "KA35CC3333",
+      "color": "Black",
+      "id": 1
+    },
+    {
+      "ownerName": "Aviral",
+      "contactNumber": "3692581470",
+      "model": "S-class",
+      "registrationNumber": "AP20UR5123",
+      "color": "Black",
+      "id": 2
+    },
+    {
+      "ownerName": "archit",
+      "contactNumber": "9874561230",
+      "model": "suv",
+      "registrationNumber": "AP44UY9999",
+      "color": "white",
+      "id": 3
+    }
+  ]
+}

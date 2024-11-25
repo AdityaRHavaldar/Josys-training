@@ -1,0 +1,57 @@
+table th,
+td {
+  border-collapse: collapse;
+  border: 1px solid grey;
+  padding: 3px 5px;
+}
+
+li {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.link:hover {
+  color: blue;
+}
+
+.navBar {
+  display: flex;
+  padding: 15px 10%;
+  justify-content: space-evenly;
+  background-color: azure;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+  margin: auto;
+}
+
+.button {
+  width: 100px;
+  padding: 3px 5px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 4px;
+}
+
+.button:hover {
+  box-shadow: 1px 2px 4px grey;
+}
+
+.submit {
+  background-color: rgb(110, 194, 233);
+  margin: 0 auto;
+}
+
+.update {
+  background-color: rgb(251, 183, 56);
+}
+
+.delete {
+  background-color: rgb(244, 113, 113);
+}

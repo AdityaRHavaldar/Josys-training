@@ -1,0 +1,9 @@
+4.  What is Unit Testing? Why do we write unit tests?
+    Who will take care writing unit testcases? 
+    What are the libraries are used to do unit testing javascript based applications?
+
+Ans : * Unit testing is a type of testing, Usually wirtten and done by the developer.
+      * It is written to detect the errors at the compile time and to verify wether the application is working as per the given condetions.
+      this helps us to varify the logic and functionality of the components. It helps us to ensure the correctness, relayability and maintanability of our code.
+      * there are many testing libraries, by default we will get the 'React testing library' while installing the react application.
+      Jest, Mocha, Chai, etc...
