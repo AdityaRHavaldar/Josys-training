@@ -1,0 +1,2 @@
+4. What mocking in Unit Testcase? How to mocking functions in React Test Library?
+Ans: Creating the duplicate or simulated version of functions or components by avoiding the dependancy on external services or complex logics 
